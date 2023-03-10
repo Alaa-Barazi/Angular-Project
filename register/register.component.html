@@ -1,0 +1,72 @@
+
+
+<div class="col-3" style="margin:auto;">
+    
+    <form [formGroup]="registerform" (ngSubmit)="onSubmit()" >
+        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+        <div class="formgroup">
+            <label>UserName: </label>
+            <input type="text"  formControlName='name' class='form-control' placeholder="Enter username"  required />
+            
+        </div>
+        <div class="formgroup">
+            <label>Full Name: </label>
+            <input type="text" formControlName='fullname' class='form-control'  placeholder="Enter username" required/>
+            
+        </div>
+
+        <div class="formgroup">
+            <label >Email: </label>
+            <input type="email"  class='form-control' placeholder="Enter email"
+            name="email" formControlName="email" required />
+           
+            
+        </div>
+
+        <div class="formgroup">
+            <div class="form-outline flex-fill mb-0">
+            <label>Password: </label>
+            <input type="password" formControlName='pass' class='form-control' placeholder="Enter password" required />
+            
+        </div>
+        </div>
+
+        <div class="formgroup">
+            <div class="form-outline flex-fill mb-0">
+            <label>Repeat Password: </label>
+            <input type="password" formControlName='passrp' class='form-control' placeholder="Enter password again" required  />
+           
+        </div>
+        </div>
+        <div class="formgroup">
+      <label>Gender:</label> <br>
+      <input type="radio"  name="gender" value="male" formControlName='gender' required>
+      
+      <label >Male</label><br>
+      <input type="radio"  name="gender" value="female" formControlName='gender' required>
+      <label >Female</label><br>
+      
+    </div>
+    <div class="formgroup">
+        <label>Birth Date &nbsp;</label>
+          <input type="date" id="birthday" formControlName='birthdate' class="form-control" required>
+         
+    </div>
+        <div class="col-4" style="margin:auto;">
+            <button type="submit" class="btn btn-primary" [disabled]="!registerform.valid && PassValidator" > Register </button>
+        </div>
+        <div class="col-6" style="margin:auto;">
+        <div> &nbsp;&nbsp;&nbsp;&nbsp;    Registered? 
+            <a class="nav-link" routerLink="../login"> &nbsp;  &nbsp; Login now</a>
+        </div>
+        
+    </div>
+
+    <div class="col-md-9 col-lg-7 col-xl-12">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+    </form>
+</div>
+

@@ -1,0 +1,32 @@
+
+<div class="col-3" style="margin:auto;">
+  <div class="col-md-9 col-lg-6 col-xl-7">
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+      class="img-fluid" alt="Sample image">
+  </div>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="Email" placeholder="Enter email" ngModel required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="Password" placeholder="Password" ngModel required>
+    </div>
+   
+    <div class="col-4" style="margin:auto;">
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+    <div class="col-6" style="margin:auto;">
+    <div>Not registered yet? 
+    <a class="nav-link" routerLink="../register">Register now</a>
+    </div>
+  </div>
+  </form>
+
+</div>
+
+
+

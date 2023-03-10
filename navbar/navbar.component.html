@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm" ngbDropdown>
+    <div  class="topnav">
+      <a routerLinkActive="active-link" routerLink="home">Home</a>
+      <a routerLinkActive="active-link" routerLink="catalog">Catalog</a>
+      <a routerLinkActive="active-link" routerLink="cart">Cart</a>
+      <a routerLinkActive="active-link" routerLink="about">About</a>
+      <a *ngIf="islogin==false" routerLinkActive="active-link" routerLink="profile">Login</a>
+      <a *ngIf="islogin==true" routerLinkActive="active-link" routerLink="profile" (click)="logout()">LogOut</a>
+      
+      <div   class="collapse navbar-collapse" id="navbar-list-4" >
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown" class="dropdown-content">
+            <a class="nav-link dropdown" href='#' id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img  [src]="img" class="user-avatar-md rounded-circle" style="width:80px;height:80px">
+            </a>
+            <div >
+            <div *ngIf="islogin==true" class="btn btn-primary dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a *ngIf="islogin==true" class="dropdown-item" [routerLink]="['/profile/userprofile',getEmail()]">User-Details</a>
+              <a *ngIf="islogin==true" class="dropdown-item" routerLink="profile" (click)="logout()">Log Out</a>
+            </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+  </nav>

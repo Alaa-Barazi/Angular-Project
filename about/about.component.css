@@ -1,0 +1,44 @@
+.center{
+    justify-content: center;
+    margin-left: 45%;
+    margin-right: 5%;
+   
+}
+
+.dark{
+    background-color: white;
+    color:blue;
+    font-size: 20px;
+}
+.bright{
+    background-color: black;
+    color:white;
+    font-size: 20px;
+   
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 2px;
+   align-items: center;
+   
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 

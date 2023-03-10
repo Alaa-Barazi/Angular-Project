@@ -1,0 +1,29 @@
+<button type="button" class='center'  [class]="mode"  (click)="change()">{{mode}}</button>
+<div class="center" class="row">
+   
+    <h2 style="text-align:center">Our Team</h2>
+    <div>
+        <div class="card">
+            <img [src]="img1"  style="width:72%">
+            <div [class]="mode" >
+                <h1 > {{name1}}</h1>
+                <p >ID:{{id1}}</p>
+                <p>{{email1}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="card">
+            <img  [src]="img2"  style="width:100%">
+           <div [class]="mode">
+                <h1> {{name2}}</h1>
+                <p>ID:{{id2}}</p>
+                <p>{{email2}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

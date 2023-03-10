@@ -1,0 +1,30 @@
+<div class="alert alert-primary" role="alert">
+    <div class="text-center">
+        <h1>Your Cart</h1>
+    </div>
+</div>
+<button type="button" class="btn btn-secondary" (click)="clearAdd()">Clear</button>
+<div *ngIf="checkUser()">
+    <button  type="button" class="btn btn-success" (click)="makepay()">Pay</button>
+</div>
+<p> Total Price: {{ total|currency}}</p>
+<div class="card-columns">
+    <div class="card" *ngFor="let item of products">
+        <div class="card-body">
+            <h5 class="card-title">{{item.product.name}}</h5>
+            <p class="small">{{item.product.color}}</p>
+            <img [src]="item.product.img" class="card-img-top" />
+            <p class="card-text">{{item.product.desc}}</p>
+            <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">{{item.product.model}}</h5>
+                <h5 class="text-dark mb-0">{{item.product.price | currency}}</h5>
+                <h5 class="text-dark mb-0">total:{{item.quantity*item.product.price | currency}}</h5>
+            </div>
+            <p class="card-text">{{item.product.price | currency}}</p>
+            <button   (click)="addToCart(item.product)">+</button>
+            <input type="number" id="number" value={{item.quantity}}/>
+            <button  (click)="removeFromCart(item.product)">-</button>
+        </div>
+    </div>
+</div>
+

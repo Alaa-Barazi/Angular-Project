@@ -1,0 +1,41 @@
+<div class="alert alert-primary"  role="alert">
+    <div class="text-center">
+    <h1>Top {{myproducts.length}} Products</h1> 
+    </div>
+</div>
+<div class="card-columns" >
+<div class="card" *ngFor="let item of myproducts">
+  <div class="card-body">
+    <h5 class="card-title" >{{item.name}}</h5>
+    <p class="small">{{item.color}}</p>
+    <img [src]="item.img" class="card-img-top" />
+    <p class="card-text">{{item.desc}}</p>
+    <div class="d-flex justify-content-between mb-3">
+      <h5 class="mb-0">{{item.model}}</h5>
+      <h5 class="text-dark mb-0">{{item.price | currency}}</h5>
+    </div>
+    <p class="card-text">{{item.price | currency}}</p>
+        <button type="button" (click)="addToCart(item, 1);" class="btn btn-primary">Add to cart</button>
+        <div class="alert alert-success" role="alert" *ngIf="productAdded?.color === item.color">
+          Added 1  to your <a routerLink="/cart">Cart</a>.
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+    
+
+
+
